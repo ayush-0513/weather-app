@@ -2,9 +2,12 @@ import React from 'react'
 import WeatherBackground from './components/WeatherBackground'
 
 const App = () => {
+
+  const getWeatherCondition = () => weather && ({
   return (
-    <div>
-</div>
+    <div className='min-h-screen'>
+      <WeatherBackground condition={getWeatherCondition()} />
+    </div>
   )
 }
 
