@@ -6,6 +6,7 @@ const App = () => {
   const [weather, setWeather] = React.useState(null);
   const [city, setCity] = React.useState('');
   const [suggestion, setSuggestion] = React.useState([]);
+  const [unit, setUnit] = React.useState('C');
 
   const API_KEY= '40d72887c44b432ba63ba74e7e3b36db'
 
@@ -52,9 +53,21 @@ const App = () => {
       
             </form>
           ): (
+            <div className='mt-6 text-center transition-opacity duration-500'>
+              <button onClick={() => { setWeather(null); setCity('') }}
+                className='bg-purple-900 hover:bg-blue-700 text-white font-semibold py-1 px-3
+                rounded transition-colors '>
+                  New Search
+
+              </button>
+
+              
+
+
+              </div>
             
-          )
-          }
+          )}
+          
 
 
 
